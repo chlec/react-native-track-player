@@ -15,6 +15,8 @@ import {
 const { TrackPlayerModule: TrackPlayer } = NativeModules
 const emitter = Platform.OS !== 'android' ? new NativeEventEmitter(TrackPlayer) : DeviceEventEmitter
 
+export const isServiceRunning = TrackPlayer.isServiceRunning
+
 // MARK: - Helpers
 
 function resolveImportedPath(path?: number | string) {
